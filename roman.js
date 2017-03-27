@@ -1,9 +1,9 @@
-var o = [1000, 500, 100, 50, 10, 9, 5, 4, 1];
-var j = ["M", "D", "C", "L", "X", "IX", "V", "IV", "I"];
+function convertToRoman(num) {
 
+    var o = [1000, 900, 500, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+    var j = ["M", "CM", "D", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
 
-// the order of subtraction is important
-function roman(num) {
+    // the order of subtraction is important !
     var ans = "";
     for (var i = 0; i < o.length; i++) {
         while (o[i] <= num) {
@@ -11,5 +11,8 @@ function roman(num) {
             ans += j[i];
         }
     }
-    console.log(ans);
+
+    return ans;
+
 }
+
