@@ -1,2 +1,6 @@
 # javascript-tricks
-Tips and tricks for javascript & Angular.js
+
+Datastructure & Algorithms
+
+1. BST ✓
+
