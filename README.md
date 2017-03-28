@@ -2,4 +2,4 @@
 
 Datastructure & Algorithms
 
-- Examples from https://www.freecodecamp.com/challenges/
+- Questions from https://www.freecodecamp.com/challenges/
