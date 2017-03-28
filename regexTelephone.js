@@ -1,7 +1,5 @@
 function telephoneCheck(str) {
-    // Good luck!
-    // extensive regex usage here
-
+    
     var regex = /((1\s)?[\d]{3}[-\s]{1}[\d]{3}[-\s]{1}[\d]{4})|[\d]{10}|(1\s?)?(\()[\d]{3}(\))[\s]?[\d]{3}-[\d]{4}/ig;
 
     var a = str.match(regex)
