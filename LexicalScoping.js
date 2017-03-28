@@ -11,7 +11,6 @@ function flatten(arr) {
             if (Array.isArray(value)) {
                 flatten2(value);
             } else {
-                // Completely spread it out 
                 res.push(value);
             }
         });
