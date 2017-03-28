@@ -2,11 +2,4 @@
 
 Datastructure & Algorithms
 
-1. BST ✓
-
-
-
-
-
-Misc
-1. Roman Numerals ✓
+- Examples from https://www.freecodecamp.com/challenges/
