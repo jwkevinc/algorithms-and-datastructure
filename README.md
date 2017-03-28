@@ -1,5 +1,5 @@
-# javascript-tricks
 
-Datastructure & Algorithms
+
+# Datastructure & Algorithms
 
 - Questions from https://www.freecodecamp.com/challenges/
