@@ -1,54 +1,54 @@
 function vertex(name, index){
 	this.name = name;
-  this.index = index;
-  this.edges = [];
-  this.addEdge = function(edges){
-  	this.edges = edges;
-  }
+  	this.index = index;
+  	this.edges = [];
+  	this.addEdge = function(edges){
+  		this.edges = edges;
+ 	 }
 }
 
 function edge(u, v, distance){
 	this.u = u;
-  this.v = v;
-  this.distance = distance;
+	this.v = v;
+  	this.distance = distance;
 }
 
 function findMin(dist, unvisited){
 	var min = Infinity;
-  var index = 0;
+  	var index = 0;
 	for (var i = 0; i < unvisited.length; i++){
  		if (dist[unvisited[i].index] < min){
-    	min = dist[unvisited[i].index];
-      index = i;
-    }
-  }
-  return index;
+    			min = dist[unvisited[i].index];
+      			index = i;
+    		}
+  	}
+  	return index;
 }
 
 function dijkstra(vertices, edges, source){
 	var dist = [];
-  var unvisited = [];
-  var prev = [];
+  	var unvisited = [];
+  	var prev = [];
 	// initialize
 	for (var i = 0; i < vertices.length; i++){
 		dist[i] = Infinity;
-    unvisited[i] = vertices[i];
-    prev[i] = null;
+    		unvisited[i] = vertices[i];
+    		prev[i] = null;
 	}
-  dist[source.index] = 0;
+	dist[source.index] = 0;
 
  	while(unvisited.length != 0){
-    var min_idx = findMin(dist, unvisited);
-  	var current = unvisited.splice(min_idx, 1)[0];
+    		var min_idx = findMin(dist, unvisited);
+  		var current = unvisited.splice(min_idx, 1)[0];
 
-   	for (var i = 0; i < current.edges.length; i++){
+   		for (var i = 0; i < current.edges.length; i++){
 			var distance = dist[current.edges[i].u.index] + current.edges[i].distance
-      if (distance < dist[current.edges[i].v.index]){
-        dist[current.edges[i].v.index] = distance;
-        prev[current.edges[i].v.index] = current.edges[i].u.index
-      }
-    }
-  }
+      			if (distance < dist[current.edges[i].v.index]){
+        			dist[current.edges[i].v.index] = distance;
+        			prev[current.edges[i].v.index] = current.edges[i].u.index
+      			}
+    		}
+	}
 	return [dist, prev]
 }
 
