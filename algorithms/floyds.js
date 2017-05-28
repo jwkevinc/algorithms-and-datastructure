@@ -5,14 +5,6 @@ function vertex(name, index){
   this.addEdge = function(edge){
     this.edges.push(edge)
   }
-  this.checkEdge = function(v){
-  	for (var i = 0; i < this.edges.length; i++){
-    	if (this.edges[i].v == v)
-      	return this.edges[i].distance
-      else
-      	return Infinity
-    }
-  }
 }
 
 function edge(u, v, distance){
